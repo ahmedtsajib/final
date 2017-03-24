@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bangladesh</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+
+<body>
+<header>
+<nav>
+<ul id="list-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="history.html">Bangladesh</a></li>
+  <li><a href="places.html">Places</a></li>
+  <li><a href="tips.html">Tips</a></li>
+  <li><a href="photo.html">Photos</a></li>
+  <li><a href="About us.html">Contact Us</a></li>
+	</ul>
+	</nav>
+
+<h1> Bangladesh For a Vacation? - You Must Be Crazy!! </h1>
+
+ <button data-target="Modal" data-toggle="modal">FInd more about Bangldesh!</button>
+</div>
+
+<div id="Modal" class="modal">
+    <div class="modal-window">
+        <h3>Visit Bangldesh</h3>
+        <p>Bangladesh might not be the first country you think of when selecting a travel destination, yet it has a lot to offer. If visiting here, you will be one of the few tourists around, which means the country is unspoiled. You will be a curiosity here instead of a commodity and Bangladeshis will swarm around you asking questions or simply staring. You will be invited for tea everywhere. </p>
+        <button data-dismiss="modal">Close</button>
+    </div>
+
+</header>
+
+</body>
+<script type="text/javascript">
+	
+	document.addEventListener('click', function (e) {
+    e = e || window.event;
+    var target = e.target || e.srcElement;
+
+    e.preventDefault();
+
+    if (target.hasAttribute('data-toggle') && target.getAttribute('data-toggle') == 'modal') {
+        if (target.hasAttribute('data-target')) {
+            var m_ID = target.getAttribute('data-target');
+            document.getElementById(m_ID).classList.add('open');
+        }
+    }
+
+    // Close modal window with 'data-dismiss' attribute or when the backdrop is clicked
+    if ((target.hasAttribute('data-dismiss') && target.getAttribute('data-dismiss') == 'modal') || target.classList.contains('modal')) {
+        var modal = document.querySelector('[class="modal open"]');
+        modal.classList.remove('open');
+    }
+}, false);
+
+</script>
+</html>
